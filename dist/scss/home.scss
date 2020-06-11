@@ -1,0 +1,243 @@
+//Color Palette
+$primary-color: #533427;
+$secondary-color: #fff3d6;
+$dark-brown: #291811;
+
+//Font family
+$poppins: "Poppins", sans-serif;
+$mukta: "Mukta", sans-serif;
+$chocolate: #331a00;
+$cream: navajowhite;
+
+* {
+  box-sizing: border-box;
+  font-family: $poppins;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin mediaQuery {
+  @media only screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+body {
+  background-color: $cream;
+  /********** Section *******/
+  section {
+    @include flex(row, nill, nill);
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    @include mediaQuery() {
+      //border: 2px solid green;
+    }
+
+    /******** Left div *******/
+    .left-div {
+      background-color: $cream;
+      width: 50%;
+      height: 100%;
+      position: relative;
+      //border: 1px solid blue;
+
+      .main {
+        height: 100%;
+        @include flex(column, space-evenly, center);
+        //border: 1px solid blue;
+
+        @include mediaQuery {
+          width: 80vw;
+          margin: 0 auto;
+          z-index: 999;
+          position: absolute;
+          left: 10vw;
+          color: white;
+          text-align: center;
+          //border: 1px solid red;
+          color: #533427;
+          @include flex(column, space-evenly, center);
+        }
+
+        .top {
+          //border: 1px solid red;
+          h1 {
+            font-family: $mukta;
+          }
+        }
+
+        .search-bar {
+          display: flex;
+          // border: 1px solid green;
+          @include mediaQuery {
+            @include flex(column, center, center);
+          }
+
+          form {
+            @include flex(row, space-between, center);
+            width: 100%;
+            // border: 1px solid red;
+            @include mediaQuery {
+              width: 100%;
+              margin: 0 auto;
+              padding: 5px 0;
+              @include flex(column, space-between, center);
+            }
+
+            .search {
+              background: white;
+              padding: 4px 2px;
+              width: 69%;
+              @include mediaQuery {
+                @include flex(row, center, center);
+                width: 100%;
+                margin-bottom: 3px;
+              }
+              input {
+                border: none;
+                outline: none;
+                width: 80%;
+                @include mediaQuery {
+                  width: 80%;
+                }
+              }
+            }
+            .btn {
+              border: none;
+              outline: none;
+              background-color: $chocolate;
+              color: white;
+              width: 30%;
+              font-size: smaller;
+              @include mediaQuery {
+                width: 50%;
+                background-color: gray;
+                color: $chocolate;
+              }
+            }
+          }
+        }
+      }
+      .btn {
+        border: none;
+        outline: none;
+        background-color: #331a00;
+        color: white;
+      }
+    }
+  }
+}
+
+/*********** Right div **********/
+.right-div {
+  background-color: $chocolate;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  @include mediaQuery {
+    display: none;
+  }
+}
+
+///////// Hero div //////////
+.hero-div {
+  height: 80%;
+  width: 50%;
+  //border: 3px solid white;
+  position: absolute;
+  z-index: 99;
+  top: 100px;
+  right: 8%;
+
+  @include mediaQuery {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    // border: 2px solid blue;
+  }
+
+  .fas {
+    font-size: 1.5em;
+    position: absolute;
+    z-index: 999;
+    color: white;
+    @include mediaQuery {
+      display: none;
+    }
+  }
+  .left {
+    left: -2%;
+    top: 50%;
+  }
+  .right {
+    right: -2%;
+    top: 50%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    @include mediaQuery {
+      width: 100%;
+      ///margin: 0 auto;
+      //border: 1px solid red;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+header ul a:hover {
+  text-decoration: none;
+  padding: 5px 15px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+}

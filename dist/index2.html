@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Contact</title>
-
+    <title>Home</title>
     <!-- Bootstrap CSS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -30,10 +28,6 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
-
-    <!-- CSS style -->
-    <link rel="stylesheet" href="../dist/css/contact.css" />
-
     <!-- Font: poppins -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -45,8 +39,21 @@
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!------ New Font: PT serif ------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="../dist/css/home.css" />
   </head>
+
   <body>
+    <div class="right-div">
+      <div class="right-nav"></div>
+    </div>
     <header>
       <div class="wrapper">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -67,7 +74,8 @@
             >
               H
             </span>
-            <span style="color: #533427;"
+
+            <span class="" style="color: #533427;"
               >Hotel<span class="font-weight-bold" style="color: #533427;"
                 >finder</span
               ></span
@@ -90,8 +98,13 @@
             id="navbarTogglerDemo02"
           >
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li>
-                <a href="index2.html" class="text-decoration-none">Home</a>
+              <li class="">
+                <a
+                  href="#"
+                  class="border border-white text-dark bg-white text-decoration-none py-1 px-3"
+                  style="border-radius: 30px; color: #1b0606; font-weight: 500;"
+                  >Home</a
+                >
               </li>
               <li>
                 <a href="rooms.html" class="text-decoration-none">Rooms/Rate</a>
@@ -101,16 +114,8 @@
                   >Facilities</a
                 >
               </li>
-              <li class="">
-                <a
-                  href="#"
-                  class="border border-white text-decoration-none py-1 px-3"
-                  style="
-                    font-weight: 500;
-                    border-radius: 30px;
-                    color: white;
-                    background: #533427;
-                  "
+              <li>
+                <a href="contact.html" class="text-decoration-none"
                   >Contact Us</a
                 >
               </li>
@@ -124,94 +129,36 @@
         </nav>
       </div>
     </header>
-    <main>
-      <section class="section1">
-        <div class="container mt-6">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="contact-img">
-                <img
-                  src="../Resources/Rooms & rates/image_2.jpg"
-                  class="contact-image"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="contact-title">
-                <span class="contact-begin">Contact Us</span>
-                <h2 class="contact-head">Let's get in touch</h2>
-              </div>
-              <div class="contact">
-                <form class="contact-form" medthod="post" action="">
-                  <label class="label text-muted">Full Name *</label>
-                  <input
-                    name="name"
-                    type="text"
-                    class="form-control"
-                    placeholder="Full Name"
-                    required
-                  />
-
-                  <label class="label-2 text-muted">E-mail id *</label>
-                  <input
-                    name="email"
-                    type="email"
-                    class="form-control"
-                    placeholder="Email address"
-                    required
-                  />
-
-                  <textarea
-                    name="message"
-                    rows="6"
-                    class="form-control textarea"
-                    placeholder="your message"
-                  ></textarea>
-                  <a href="" class="site-btn"
-                    >Send
-                    <img
-                      src="../Resources/icons/gpu cr.png"
-                      class="btn-img"
-                      alt=""
-                  /></a>
-                </form>
-              </div>
-            </div>
+    <section>
+      <div class="left-div">
+        <div class="main">
+          <div class="top">
+            <h1>FIND</h1>
+            <h1>AND BOOK</h1>
+            <h3>Hotels in Nigeria and Africa</h3>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="container-fluid pt-5" id="contact-footer">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="text-center">Subscribe to our Newsletter</div>
-          <div class="input-group">
-            <input
-              id="sub-form"
-              type="email"
-              class="form-control text-center"
-              placeholder="Domin-name@gmail.com"
-            />
+          <div class="search-bar">
+            <form action="">
+              <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="search hotel here" />
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <button class="btn">Find Hotel</button>
+            </form>
           </div>
-        </div>
-        <div class="col-md-4 text-center headphone">
-          <img
-            src="../Resources/icons/headphones 1.png"
-            alt=""
-            id="headphone_img"
-          />
-          <p>Phone: +2348167758317, +234806775632</p>
-          <span>Office Address: 42 Alagomeji, Yaba , Lagos State, Nigeria</span>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="../Resources/icons/time 2.png" alt="" />
-          <p>9a.m - 4p.m Monday - Friday</p>
         </div>
       </div>
-    </footer>
+    </section>
+    <!-----End of main-container div----->
 
-    <script src="main.js" ;></script>
+    <div class="hero-div">
+      <img src="../Resources/Rooms & rates/image_3.jpg" alt="homepage image" />
+      <i class="fas fa-chevron-circle-left left"></i>
+      <i class="fas fa-chevron-circle-right right"></i>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
