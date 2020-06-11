@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+  background: linear-gradient(rgba(20, 7, 2, 0.9), rgba(20, 7, 2, 0.9)),
+    url("../Resources/Rooms & rates/room_6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 30px;
+}
+nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-v1 {
+  max-width: 100%;
+  width: 1320px;
+  padding-left: 30px;
+  margin: 0 auto;
+}
+.book-now {
+  /* border: 0 solid; */
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  border: rgba(27, 6, 6, 0.9) solid;
+}
+.fac-list {
+  width: 412px;
+  height: 418px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+}
+.footer-v2 {
+  margin-top: -50px;
+}
+
+header ul a:hover {
+  text-decoration: none;
+  padding: 5px 15px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+  div.fac-div {
+    flex-wrap: wrap-reverse !important;
+    justify-content: center;
+    text-align: center;
+  }
+  .fac-list {
+    width: auto;
+    height: 418px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+  }
+  .collapse-menu-v1 {
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  .footer-v2 {
+    margin-top: -50px;
+  }
+  footer {
+    text-align: center;
+  }
+}
