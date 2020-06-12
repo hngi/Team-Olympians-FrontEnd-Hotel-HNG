@@ -40,7 +40,7 @@ a {
 body {
   background: #e5e5e5;
   @include mediaQuery() {
-    background: url("/Resources/Rooms & rates/room_1.jpg");
+    background: url("../../Resources/Rooms & rates/room_1.jpg");
     background-size: cover;
     background-attachment: fixed;
     &::after {
@@ -175,7 +175,7 @@ body {
 
 /*********** Right div **********/
 .right-div {
-  background: url("/Resources/Rooms\ &\ rates/room_6.jpg");
+  background: url("../../Resources/Rooms\ &\ rates/room_6.jpg");
   position: fixed;
   background-size: cover;
   background-position: fixed;
