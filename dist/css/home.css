@@ -14,8 +14,13 @@ a:hover {
 }
 
 body {
-  background-color: navajowhite;
+  background: #e5e5e5;
   /********** Section *******/
+}
+@media only screen and (max-width: 750px) {
+  body {
+    background: navajowhite;
+  }
 }
 body section {
   display: flex;
@@ -28,20 +33,22 @@ body section {
   /******** Left div *******/
 }
 body section .left-div {
-  background-color: navajowhite;
   width: 50%;
   height: 100%;
   position: relative;
 }
 body section .left-div .main {
-  height: 100%;
+  top: 40px;
+  height: 80%;
+  padding-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 750px) {
   body section .left-div .main {
+    padding-left: 0;
     width: 80vw;
     margin: 0 auto;
     z-index: 999;
@@ -58,6 +65,18 @@ body section .left-div .main {
 }
 body section .left-div .main .top h1 {
   font-family: "Mukta", sans-serif;
+  font-size: 72px;
+}
+body section .left-div .main .top h3 {
+  font-size: 32px;
+}
+@media only screen and (max-width: 750px) {
+  body section .left-div .main .top h1 {
+    font-size: 48px;
+  }
+  body section .left-div .main .top h3 {
+    font-size: 24px;
+  }
 }
 body section .left-div .main .search-bar {
   display: flex;
@@ -137,12 +156,12 @@ body section .left-div .btn {
 
 /*********** Right div **********/
 .right-div {
-  background-color: #331a00;
+  background: linear-gradient(90deg, navajowhite 0%, navajowhite 50%, #331a00 50%, #331a00 100%);
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 90vh;
 }
 @media only screen and (max-width: 750px) {
   .right-div {
@@ -151,18 +170,24 @@ body section .left-div .btn {
 }
 
 .hero-div {
-  height: 80%;
-  width: 50%;
+  max-height: 900px;
+  max-width: 900px;
+  height: 700px;
+  width: 900px;
+  border: 3px solid white;
   position: absolute;
   z-index: 99;
-  top: 100px;
-  right: 8%;
+  bottom: 0;
+  right: 6%;
 }
 @media only screen and (max-width: 750px) {
   .hero-div {
     position: relative;
-    width: 100vw;
-    height: 70vh;
+    top: 0;
+    width: 100%;
+    height: auto;
+    right: 0;
+    border: 0;
   }
 }
 .hero-div .fas {

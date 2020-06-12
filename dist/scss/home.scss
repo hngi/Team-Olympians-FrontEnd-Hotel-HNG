@@ -38,7 +38,10 @@ a {
 }
 
 body {
-  background-color: $cream;
+  background: #e5e5e5;
+  @include mediaQuery() {
+    background: $cream;
+  }
   /********** Section *******/
   section {
     @include flex(row, nill, nill);
@@ -51,18 +54,19 @@ body {
 
     /******** Left div *******/
     .left-div {
-      background-color: $cream;
       width: 50%;
       height: 100%;
       position: relative;
-      //border: 1px solid blue;
 
       .main {
-        height: 100%;
-        @include flex(column, space-evenly, center);
-        //border: 1px solid blue;
+        top: 40px;
+        height: 80%;
+        // border: 1px solid blue;
+        padding-left: 10%;
+        @include flex(column, space-evenly, flex-start);
 
         @include mediaQuery {
+          padding-left: 0;
           width: 80vw;
           margin: 0 auto;
           z-index: 999;
@@ -79,6 +83,18 @@ body {
           //border: 1px solid red;
           h1 {
             font-family: $mukta;
+            font-size: 72px;
+          }
+          h3 {
+            font-size: 32px;
+          }
+          @include mediaQuery() {
+            h1 {
+              font-size: 48px;
+            }
+            h3 {
+              font-size: 24px;
+            }
           }
         }
 
@@ -146,12 +162,18 @@ body {
 
 /*********** Right div **********/
 .right-div {
-  background-color: $chocolate;
+  background: linear-gradient(
+    90deg,
+    $cream 0%,
+    $cream 50%,
+    $chocolate 50%,
+    $chocolate 100%
+  );
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 90vh;
   @include mediaQuery {
     display: none;
   }
@@ -159,19 +181,25 @@ body {
 
 ///////// Hero div //////////
 .hero-div {
-  height: 80%;
-  width: 50%;
-  //border: 3px solid white;
+  max-height: 900px;
+  max-width: 900px;
+  height: 700px;
+  width: 900px;
+
+  border: 3px solid white;
+
   position: absolute;
   z-index: 99;
-  top: 100px;
-  right: 8%;
+  bottom: 0;
+  right: 6%;
 
   @include mediaQuery {
     position: relative;
-    width: 100vw;
-    height: 70vh;
-    // border: 2px solid blue;
+    top: 0;
+    width: 100%;
+    height: auto;
+    right: 0;
+    border: 0;
   }
 
   .fas {
