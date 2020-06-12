@@ -40,7 +40,19 @@ a {
 body {
   background: #e5e5e5;
   @include mediaQuery() {
-    background: $cream;
+    background: url("/Resources/Rooms & rates/room_1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: darken(rgba($cream, 0.87), 0);
+    }
   }
   /********** Section *******/
   section {
@@ -84,6 +96,7 @@ body {
           h1 {
             font-family: $mukta;
             font-size: 72px;
+            color: #533427;
           }
           h3 {
             font-size: 32px;
@@ -162,18 +175,32 @@ body {
 
 /*********** Right div **********/
 .right-div {
-  background: linear-gradient(
-    90deg,
-    $cream 0%,
-    $cream 50%,
-    $chocolate 50%,
-    $chocolate 100%
-  );
+  background: url("/Resources/Rooms\ &\ rates/room_6.jpg");
   position: fixed;
+  background-size: cover;
+  background-position: fixed;
   top: 0;
   right: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      $cream 0%,
+      $cream 50%,
+      $chocolate 50%,
+      $chocolate 100%
+    );
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.88;
+  }
   @include mediaQuery {
     display: none;
   }
@@ -181,8 +208,8 @@ body {
 
 ///////// Hero div //////////
 .hero-div {
-  max-height: 900px;
-  max-width: 900px;
+  max-height: 70vh;
+  max-width: 70vw;
   height: 700px;
   width: 900px;
 
@@ -196,9 +223,12 @@ body {
   @include mediaQuery {
     position: relative;
     top: 0;
+    max-width: 100%;
+    justify-self: center;
     width: 100%;
     height: auto;
     right: 0;
+    left: 0;
     border: 0;
   }
 
@@ -268,4 +298,26 @@ header ul a:hover {
   color: white;
   border: 2px solid white;
   border-radius: 30px;
+}
+
+footer {
+  display: none;
+  // overflow: hidden;
+  @include mediaQuery() {
+    display: block;
+    max-width: 100%;
+    background: rgba(white, 0.9);
+    position: relative;
+
+    #headphone_img {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .headphone p {
+      line-height: 0.5;
+    }
+    .headphone {
+      margin-bottom: 20px;
+    }
+  }
 }
