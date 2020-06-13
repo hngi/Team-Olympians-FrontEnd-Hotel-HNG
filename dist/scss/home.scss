@@ -68,9 +68,9 @@ body {
   section {
     @include flex(row, nill, nill);
     position: relative;
-    height: 86vh;
+    height: auto;
     width: 100vw;
-    //border: 3px solid blue;
+    // border: 3px solid green;
     @include mediaQuery() {
       //border: 2px solid green;
     }
@@ -87,23 +87,22 @@ body {
       }
 
       .main {
+        // border: 2px solid blue;
+        height: auto;
         .slogan {
           h2 {
             font-family: $mukta;
           }
         }
-        height: 100%;
         color: $primary-color;
         @include flex(column, space-evenly, center);
         //border: 3px solid red;
 
         @include mediaQuery {
-          width: 80vw;
           margin: 0 auto;
+          margin-bottom: 100px;
+          position: relative;
           z-index: 999;
-          position: absolute;
-          left: 10vw;
-          color: white;
           text-align: center;
           //border: 1px solid blue;
           color: #533427;
@@ -127,11 +126,10 @@ body {
         .search-bar {
           flex: 3 1 auto;
           width: 50%;
-          // border: 1px solid white;
+          // border: 1px solid black;
           @include flex(column, center, center);
           @include mediaQuery {
             width: 80%;
-            border: none;
           }
 
           form {
@@ -139,7 +137,7 @@ body {
             width: 100%;
             height: 100%;
             margin: 0 auto;
-            //border: 1px solid red;
+            // border: 1px solid red;
             @include mediaQuery {
               width: 90%;
             }
@@ -244,15 +242,18 @@ body {
 
   ///////// Hero div //////////
   .hero-div {
-    height: 60%;
     width: 50%;
+    height: auto;
     position: absolute;
     top: 20%;
     right: 8%;
     border: 3px solid white;
     z-index: 99;
-    //display: none;
-    //
+    .transparent-bg {
+      width: 100%;
+      height: 100%;
+      color: $secondary-color;
+    }
     @include mediaQuery() {
       position: relative;
       width: 100%;
@@ -262,42 +263,13 @@ body {
       top: 0;
       right: 0;
       left: 0;
+      bottom: 0;
       border: 0;
-    }
-
-    .carousel {
-      //border: 3px solid red;
-      height: 100%;
-      .carousel-inner {
-        height: 100%;
-        .carousel-item {
-          height: 100%;
-          .image {
-            height: 100%;
-            //border: 2px solid blue;
-          }
-        }
-      }
-    }
-
-    .image {
-      //width: 100%;
-      height: 100%;
-    }
-
-    .fas {
-      font-size: 1.5em;
-      position: absolute;
-      z-index: 999;
-      color: white;
-      @include mediaQuery {
-        display: none;
-      }
     }
 
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       @include mediaQuery {
         width: 100%;
         ///margin: 0 auto;
