@@ -51,7 +51,7 @@ body section {
   justify-content: nill;
   align-items: nill;
   position: relative;
-  height: 86vh;
+  height: auto;
   width: 100vw;
   /******** Left div *******/
   /*********** Right div **********/
@@ -68,7 +68,7 @@ body section .left-div {
   }
 }
 body section .left-div .main {
-  height: 100%;
+  height: auto;
   color: #533427;
   display: flex;
   flex-direction: column;
@@ -80,12 +80,10 @@ body section .left-div .main .slogan h2 {
 }
 @media only screen and (max-width: 750px) {
   body section .left-div .main {
-    width: 80vw;
     margin: 0 auto;
+    margin-bottom: 100px;
+    position: relative;
     z-index: 999;
-    position: absolute;
-    left: 10vw;
-    color: white;
     text-align: center;
     color: #533427;
     display: flex;
@@ -105,7 +103,6 @@ body section .left-div .main .search-bar {
 @media only screen and (max-width: 750px) {
   body section .left-div .main .search-bar {
     width: 80%;
-    border: none;
   }
 }
 body section .left-div .main .search-bar form {
@@ -194,13 +191,18 @@ body section .right-div::before {
   }
 }
 body .hero-div {
-  height: 60%;
   width: 50%;
+  height: auto;
   position: absolute;
   top: 20%;
   right: 8%;
   border: 3px solid white;
   z-index: 99;
+}
+body .hero-div .transparent-bg {
+  width: 100%;
+  height: 100%;
+  color: #fff3d6;
 }
 @media only screen and (max-width: 750px) {
   body .hero-div {
@@ -212,38 +214,13 @@ body .hero-div {
     top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     border: 0;
-  }
-}
-body .hero-div .carousel {
-  height: 100%;
-}
-body .hero-div .carousel .carousel-inner {
-  height: 100%;
-}
-body .hero-div .carousel .carousel-inner .carousel-item {
-  height: 100%;
-}
-body .hero-div .carousel .carousel-inner .carousel-item .image {
-  height: 100%;
-}
-body .hero-div .image {
-  height: 100%;
-}
-body .hero-div .fas {
-  font-size: 1.5em;
-  position: absolute;
-  z-index: 999;
-  color: white;
-}
-@media only screen and (max-width: 750px) {
-  body .hero-div .fas {
-    display: none;
   }
 }
 body .hero-div img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 @media only screen and (max-width: 750px) {
   body .hero-div img {
